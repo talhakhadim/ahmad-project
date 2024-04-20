@@ -1,29 +1,28 @@
 const express = require('express');
+const checkState = require('../../middleware/stateCheck');
 const router = express.Router();
 const statesController = require('../../controllers/statesController');
 
 router.route('/')
     .get(statesController.getAllStates)
 
-router.route('/:state')
-    .get(statesController.getState);
-
+router.route('/:state').get (checkState, statesController.getState);
 router.route('/:state/funfact')
-    .get(statesController.getFunfact)
-    .patch(statesController.updateFunfact)
-    .post(statesController.createNewFunfact)
-    .delete(statesController.deleteFunFact);
+    .get(checkState,statesController.getFunfact)
+    .patch(checkState,statesController.updateFunfact)
+    .post(checkState,statesController.createNewFunfact)
+    .delete(checkState,statesController.deleteFunFact);
 
 router.route('/:state/capital')
-    .get(statesController.getCapital);
+    .get(checkState,statesController.getCapital);
 
 router.route('/:state/nickname')
-    .get(statesController.getNickname);
+    .get(checkState,statesController.getNickname);
 
 router.route('/:state/population')
-    .get(statesController.getPopulation);
+    .get(checkState,statesController.getPopulation);
 
 router.route('/:state/admission')
-    .get(statesController.getAdmission);
+    .get(checkState,statesController.getAdmission);
     
 module.exports = router;

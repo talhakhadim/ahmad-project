@@ -1,3 +1,4 @@
 20230429	22:45:45	f829acdb-c316-46e2-9ef4-183193745529	TypeError: fsPromises.readPile is not a function
 20230430	00:20:07	8b549bbb-d17c-418b-81a9-802f5550f719	Error: Not allowed by CORS
 20230501	15:42:46	43635e82-ddda-43a5-8ae4-c3419d78648c	Error: ENOENT: no such file or directory, stat 'C:\INF653_Final_Project\controllers\views\404.html'
+20240420	18:38:44	be484b06-70c0-48e7-9fd3-fd777563d1b9	TypeError: Cannot read properties of undefined (reading 'toLowerCase')
